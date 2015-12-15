@@ -1,0 +1,16 @@
+{
+  "isServer": false,
+  "server":{
+    "port":3002
+  },
+  "client": {
+    "address": "10.60.60.5",
+    "port": 3000
+  },
+  "remote": false,
+  "serviceName": "remote",
+  "timer":{
+    "duration":15000
+  },
+  "clickInterval" : 3000
+}
