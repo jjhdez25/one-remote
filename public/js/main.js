@@ -24,7 +24,7 @@ $(document).on('tap', triggerEl, function(e) {
   $this.toggleClass('record');
 
   if ($this.hasClass('record')) {
-    socket.emit('start', 'go');
+    socket.emit('/recorder/start');
     console.log('emit start');
     $(triggerEl).addClass('wait');
     setTimeout(function(){
@@ -33,7 +33,7 @@ $(document).on('tap', triggerEl, function(e) {
   }
 });
 
-socket = io(':' + config.server.port)
+socket = io(':' + 3131)
   .on('connect', function() {
     console.log('connected');
     Messenger().post({
@@ -97,7 +97,7 @@ socket = io(':' + config.server.port)
     $('message').addClass('success').text(data.msg);
     setTimeout(clearMessage, 3000);
   })
-  .on('photoTaken', function(){
+  .on('/recorder-front/finished', function(){
     $(triggerEl).removeClass('active');
     $(triggerEl).removeClass('wait');
     $('.message-capture').fadeIn(400, function() {
