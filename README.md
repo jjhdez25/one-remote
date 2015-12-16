@@ -6,6 +6,8 @@ A simple node app which receive data and convert them to mp4
 Install
 ==============
 
+You'll need to run node `v0.12.7`
+
 Do not forget to install ffmpeg
 
 On OsX
