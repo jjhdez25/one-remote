@@ -1,7 +1,7 @@
 {
   "isServer": false,
   "server":{
-    "port":3002
+    "port":3131
   },
   "client": {
     "address": "10.60.60.5",

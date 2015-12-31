@@ -33,7 +33,7 @@ $(document).on('tap', triggerEl, function(e) {
   }
 });
 
-socket = io(':' + 3131)
+socket = io()
   .on('connect', function() {
     console.log('connected');
     Messenger().post({
